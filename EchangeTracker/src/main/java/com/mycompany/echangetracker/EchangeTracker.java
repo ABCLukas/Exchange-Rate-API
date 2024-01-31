@@ -9,7 +9,7 @@ import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
-
+import javax.swing.JOptionPane;
 /**
  *
  * @author schne
@@ -19,8 +19,8 @@ public class EchangeTracker {
     public static void main(String[] args) {
         //Create standart classes
         String api_key = "Your API KEY";
-        String baseCurrency = "USD";
-        String targetCurrency = "CHF";
+        String baseCurrency = JOptionPane.showInputDialog("Base Curreny");
+        String targetCurrency = JOptionPane.showInputDialog("Target Currency");
         
         //Build the URL
         String apiUrl = "https://open.er-api.com/v6/latest/" + baseCurrency + "?apikey=" + api_key;
